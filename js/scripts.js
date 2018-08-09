@@ -10,9 +10,9 @@ $(document).ready(function(){
     }
   });
 
-  $("form#chrisButton").submit(function(event){
+  $("form#chris").submit(function(event){
     event.preventDefault();
-    var chrisChoice = $("input:radio[name=choice]:checked").val();
+    var chrisChoice = $("input:radio[name=answer1]:checked").val();
     if (chrisChoice === "hike") {
       $("div#hike").show();
     }
@@ -20,14 +20,15 @@ $(document).ready(function(){
       $("div#nightclub").show();
     }
     else if (chrisChoice === "movie"){
-      $("#movies").show();
+      $("div#movies").show();
     }
+
   });
-  $("form#sarahButton").submit(function(event){
+  $("form#sarah").submit(function(event){
     event.preventDefault();
-    var sarahChoice = $("input:radio[name=choice]:checked").val();
+    var sarahChoice = $("input:radio[name=answer2]:checked").val();
     if (sarahChoice === "camping") {
-      $("#camping").show();
+      $("div#camping").show();
     }
     else if (sarahChoice === "bars"){
       $("div#bars").show();
@@ -35,6 +36,5 @@ $(document).ready(function(){
     else if (sarahChoice === "horse"){
       $("div#horse").show();
     }
-    event.preventDefault();
   });
 });
